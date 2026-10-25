@@ -32,8 +32,8 @@ window.BIRTHDAY = {
   },
 
   gate: {
-    waiting: "Sebentar lagi, Umi.",
-    waitingSub: "Ada sesuatu yang Abi siapkan untukmu. Tunggu sampai tengah malam, ya.",
+    waiting: "Selamat Ulang Tahun, Umi.",
+    waitingSub: "Mungkin, hadiah abi ga terlalu besar kali ini. Tapi semoga ini berarti ya, Sayang.",
     ready: "Sudah waktunya.",
     readySub: "Selamat datang di umurmu yang baru.",
     button: "Buka hadiahmu",
