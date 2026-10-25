@@ -407,44 +407,33 @@
   /* ---------- Galeri + lightbox ---------- */
   const grid = $("galleryGrid");
   const tilts = [-2.5, 1.8, -1.2, 2.6, -1.8, 1.2];
-  const shown = [];
-  let pending = C.gallery.length;
 
   C.gallery.forEach((item, i) => {
     const fig = el("button", "polaroid reveal");
     fig.type = "button";
     fig.style.setProperty("--r", tilts[i % tilts.length] + "deg");
-    fig.hidden = true;
     const inner = photo(item.photo, item.caption, () => {
-      if (!isPreview) fig.remove(); else fig.hidden = false;
-      settle();
+      if (!isPreview) fig.remove();
+      if (!grid.querySelector(".polaroid img") && !isPreview) $("gallery").hidden = true;
     });
-    const cap = el("figcaption", null, item.caption);
-    fig.append(inner, cap);
-    grid.append(fig);
-    const img = inner.querySelector("img");
-    img.loading = "eager";
-    img.addEventListener("load", () => { fig.hidden = false; shown.push({ fig, item }); observeReveal(fig); settle(); });
+    fig.append(inner, el("figcaption", null, item.caption));
     fig.addEventListener("click", () => {
       if (!fig.querySelector("img")) return;
-      const ordered = orderedShown();
-      openLightbox(ordered.findIndex((s) => s.fig === fig));
+      openLightbox(galleryItems().findIndex((s) => s.fig === fig));
     });
+    grid.append(fig);
+    observeReveal(fig);
   });
 
-  function settle() {
-    pending--;
-    if (pending > 0) return;
-    if (!grid.children.length) $("gallery").hidden = true;
-    grid.querySelectorAll(".polaroid").forEach(observeReveal);
-  }
-
-  const orderedShown = () => [...grid.children].map((fig) => shown.find((s) => s.fig === fig)).filter(Boolean);
+  // Foto galeri yang gagal dimuat sudah dihapus, jadi sisanya yang bisa dibuka di lightbox.
+  const galleryItems = () => [...grid.querySelectorAll(".polaroid")]
+    .filter((fig) => fig.querySelector("img"))
+    .map((fig) => ({ fig, item: { photo: fig.querySelector("img").getAttribute("src"), caption: fig.querySelector("figcaption").textContent } }));
 
   const lb = $("lightbox");
   let lbIndex = 0, lbList = [], lastFocus = null;
   function openLightbox(i) {
-    lbList = orderedShown();
+    lbList = galleryItems();
     if (!lbList.length) return;
     lastFocus = document.activeElement;
     lb.hidden = false;

@@ -28,7 +28,7 @@ Taruh foto di `assets/photos/` dengan nama berikut (huruf kecil):
 | `2024-aaron.jpg` | Timeline: Aaron Al Khalif hadir |
 | `2025-berempat.jpg` | Timeline: Kita berempat |
 | `2026-umi.jpg` | Timeline: Umi, tiga puluh |
-| `galeri-01.jpg` … `galeri-12.jpg` | Galeri polaroid (yang tidak ada otomatis disembunyikan) |
+| `galeri-01.jpg` … `galeri-29.jpg` | Galeri polaroid (yang tidak ada otomatis disembunyikan) |
 | `muwsa.jpg`, `aaron.jpg` | Foto bulat di kartu pesan anak |
 
 Lalu kecilkan ukurannya supaya cepat dibuka di HP (juga mengubah .png/.heic/.jpeg menjadi .jpg dan menghapus data lokasi GPS):

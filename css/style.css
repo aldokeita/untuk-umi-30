@@ -571,6 +571,8 @@ body.is-open .hero .hero-inner > :nth-child(5) { animation-delay: 2.2s; }
   color: var(--ink);
 }
 .tl-text { margin: 0 0 18px; color: var(--ink-soft); }
+.tl-item .frame-inner { aspect-ratio: 4 / 5; }
+.tl-item .frame { max-width: 440px; }
 
 /* Bingkai foto & placeholder */
 .frame {
@@ -590,6 +592,7 @@ body.is-open .hero .hero-inner > :nth-child(5) { animation-delay: 2.2s; }
 .frame-inner img {
   width: 100%; height: 100%;
   object-fit: cover;
+  object-position: 50% 30%;
   transition: transform 1.2s var(--ease-out), opacity .8s;
 }
 .frame:hover .frame-inner img { transform: scale(1.03); }
