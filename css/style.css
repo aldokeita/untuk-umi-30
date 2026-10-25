@@ -189,6 +189,14 @@ body::before {
   color: rgba(243,238,230,.55);
 }
 #gateBtn { animation: pulse 2.6s ease-in-out infinite; }
+.gate-music {
+  margin: 1.6em 0 0;
+  font-size: .9rem;
+  font-style: italic;
+  color: rgba(243,238,230,.6);
+  animation: blink 2.4s ease-in-out infinite;
+}
+.gate-music[hidden] { display: none; }
 #gateBtn[hidden] { display: none; }
 
 /* ---------- Amplop ---------- */

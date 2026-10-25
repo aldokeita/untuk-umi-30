@@ -156,7 +156,7 @@
   const MAX_VOL = .6;
 
   bgm.src = C.music.src;
-  bgm.addEventListener("error", () => { musicOk = false; musicBtn.hidden = true; });
+  bgm.addEventListener("error", () => { musicOk = false; musicBtn.hidden = true; $("gateMusic").hidden = true; });
 
   function fadeTo(target, ms = 2500) {
     clearInterval(fadeTimer);
@@ -172,20 +172,27 @@
   function playMusic() {
     if (!musicOk) return;
     musicWanted = true;
+    musicBtn.hidden = false;
+    if (!bgm.paused) { setMusicUI(true); return; }
     bgm.volume = 0;
     const p = bgm.play();
     if (p) p.then(() => { fadeTo(MAX_VOL); setMusicUI(true); }).catch(() => { setMusicUI(false); armResume(); });
     musicBtn.hidden = false;
   }
 
-  // Beberapa browser (mis. browser bawaan WhatsApp/Instagram) menolak putar pertama.
-  // Kalau begitu, sentuhan berikutnya di mana saja langsung memulai musik.
-  const resumeEvents = ["pointerdown", "touchend", "keydown"];
+  // Browser hanya mengizinkan musik setelah ada ketukan (geser/scroll tidak dihitung).
+  // Ketukan pertama di mana saja, termasuk di layar hitung mundur, memulai musik.
+  const resumeEvents = ["click", "touchend", "keydown"];
   function tryResume(e) {
     if (musicBtn.contains(e.target)) return;
     if (!musicOk || !musicWanted || !bgm.paused) { disarmResume(); return; }
     bgm.volume = MAX_VOL;
-    bgm.play().then(() => { setMusicUI(true); disarmResume(); }).catch(() => {});
+    bgm.play().then(() => {
+      setMusicUI(true);
+      musicBtn.hidden = false;
+      $("gateMusic").hidden = true;
+      disarmResume();
+    }).catch(() => {});
   }
   function armResume() { resumeEvents.forEach((t) => document.addEventListener(t, tryResume, true)); }
   function disarmResume() { resumeEvents.forEach((t) => document.removeEventListener(t, tryResume, true)); }
@@ -201,6 +208,10 @@
     else { musicWanted = false; bgm.pause(); setMusicUI(false); }
   });
 
+  // Di layar hitung mundur musik sudah boleh diputar, cukup dengan satu ketukan.
+  musicWanted = true;
+  armResume();
+
   document.addEventListener("visibilitychange", () => {
     if (!musicOk) return;
     if (document.hidden) bgm.pause();
@@ -213,7 +224,7 @@
   gateBtn.addEventListener("click", () => {
     $("gateCountdown").hidden = true;
     $("gateEnvelope").hidden = false;
-    bgm.load();
+    bgm.preload = "auto";
     $("envelope").focus({ preventScroll: true });
   });
 
