@@ -85,7 +85,7 @@ window.BIRTHDAY = {
     {
       date: "25 Maret 2021",
       title: "Umi jadi ibu",
-      text: "Muwsa lahir. Pertama kali lihat Umi gendok kakak, Abi cuma biso senyum-senyum dewek.",
+      text: "Muwsa lahir. Pertama kali lihat Umi gendong kakak, Abi cuma biso senyum-senyum dewek.",
       photo: "assets/photos/2021-muwsa.jpg"
     },
     {
