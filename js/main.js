@@ -174,9 +174,21 @@
     musicWanted = true;
     bgm.volume = 0;
     const p = bgm.play();
-    if (p) p.then(() => { fadeTo(MAX_VOL); setMusicUI(true); }).catch(() => setMusicUI(false));
+    if (p) p.then(() => { fadeTo(MAX_VOL); setMusicUI(true); }).catch(() => { setMusicUI(false); armResume(); });
     musicBtn.hidden = false;
   }
+
+  // Beberapa browser (mis. browser bawaan WhatsApp/Instagram) menolak putar pertama.
+  // Kalau begitu, sentuhan berikutnya di mana saja langsung memulai musik.
+  const resumeEvents = ["pointerdown", "touchend", "keydown"];
+  function tryResume(e) {
+    if (musicBtn.contains(e.target)) return;
+    if (!musicOk || !musicWanted || !bgm.paused) { disarmResume(); return; }
+    bgm.volume = MAX_VOL;
+    bgm.play().then(() => { setMusicUI(true); disarmResume(); }).catch(() => {});
+  }
+  function armResume() { resumeEvents.forEach((t) => document.addEventListener(t, tryResume, true)); }
+  function disarmResume() { resumeEvents.forEach((t) => document.removeEventListener(t, tryResume, true)); }
 
   function setMusicUI(playing) {
     musicBtn.classList.toggle("is-muted", !playing);
@@ -184,7 +196,8 @@
   }
 
   musicBtn.addEventListener("click", () => {
-    if (bgm.paused) { musicWanted = true; bgm.play().then(() => { fadeTo(MAX_VOL, 1200); setMusicUI(true); }).catch(() => {}); }
+    disarmResume();
+    if (bgm.paused) { musicWanted = true; bgm.volume = MAX_VOL; bgm.play().then(() => setMusicUI(true)).catch(() => {}); }
     else { musicWanted = false; bgm.pause(); setMusicUI(false); }
   });
 
@@ -665,7 +678,9 @@
   if (isPreview && params.has("skip")) {
     opened = true;
     musicBtn.hidden = !musicOk;
+    musicWanted = true;
     setMusicUI(false);
+    armResume();
     openSite();
   }
 })();
