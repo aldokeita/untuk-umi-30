@@ -73,7 +73,7 @@ window.BIRTHDAY = {
     {
       date: "18 April 2020",
       title: "Hari kita dimulai",
-      text: "Akad di tengah pandemi, dengan segala keterbatasannya. Yang penting hari itu kita sah, sisanya kita jalani berdua.",
+      text: "Akad di tengah pandemi, dengan segala keterbatasannya. Yang penting hari itu kita sah, sisonyo bismillah bae lah.",
       photo: "assets/photos/2020-menikah.jpg"
     },
     {
@@ -85,25 +85,25 @@ window.BIRTHDAY = {
     {
       date: "25 Maret 2021",
       title: "Umi jadi ibu",
-      text: "Muwsa lahir. Pertama kali lihat Umi menggendong dia, Abi cuma bisa senyum-senyum sendiri.",
+      text: "Muwsa lahir. Pertama kali lihat Umi gendok kakak, Abi cuma biso senyum-senyum dewek.",
       photo: "assets/photos/2021-muwsa.jpg"
     },
     {
       date: "2022",
       title: "Belajar jadi orang tua",
-      text: "Kurang tidur, rumah berantakan, dan kita sama-sama belajar dari nol. Pelan-pelan ternyata bisa juga.",
+      text: "Kurang tidur, rumah berantakan, muka ga karuan dan kita sama-sama belajar jadi orang tua. Pelan-pelan ternyata mesih pening juga kwkw.",
       photo: "assets/photos/2022-keluarga.jpg"
     },
     {
       date: "2023",
       title: "Kakak makin besar",
-      text: "Muwsa makin pintar dan makin banyak tanya. Yang paling sabar menjawab semuanya tetap Umi.",
+      text: "Muwsa makin pintar dan makin banyak tanya. Yang paling sabar menjawab semuanya ya tetap Abi :p.",
       photo: "assets/photos/2023-keluarga.jpg"
     },
     {
       date: "2 Desember 2024",
       title: "Adek Khalif lahir",
-      text: "Aaron Al Khalif lahir. Tangan Umi makin sibuk, tapi Umi tetap telaten mengurus dua anak sekaligus.",
+      text: "Aaron Al Khalif lahir. Tangan Umi makin sibuk, tapi Umi tetap telaten ngurus dua bocil sekaligus.",
       photo: "assets/photos/2024-aaron.jpg"
     },
     {
@@ -142,12 +142,12 @@ window.BIRTHDAY = {
     { photo: "assets/photos/galeri-17.jpg", caption: "Istri Abi" },
     { photo: "assets/photos/galeri-18.jpg", caption: "Peace dulu" },
     { photo: "assets/photos/galeri-19.jpg", caption: "Malam santai" },
-    { photo: "assets/photos/galeri-20.jpg", caption: "Waktunya Umi" },
+    { photo: "assets/photos/galeri-20.jpg", caption: "Umi Cantik" },
     { photo: "assets/photos/galeri-21.jpg", caption: "Umi dan dua jagoan" },
     { photo: "assets/photos/galeri-22.jpg", caption: "Lebaran 2026" },
     { photo: "assets/photos/galeri-23.jpg", caption: "Makan bareng" },
     { photo: "assets/photos/galeri-24.jpg", caption: "Senyum Kakak" },
-    { photo: "assets/photos/galeri-25.jpg", caption: "Satu cermin, empat orang" },
+    { photo: "assets/photos/galeri-25.jpg", caption: "Cafe time" },
     { photo: "assets/photos/galeri-26.jpg", caption: "Masih kita" },
     { photo: "assets/photos/galeri-27.jpg", caption: "Iseng pakai filter" },
     { photo: "assets/photos/galeri-28.jpg", caption: "Jempol buat Umi" },
@@ -158,48 +158,48 @@ window.BIRTHDAY = {
     "Umi selalu tahu barang Abi ada di mana, padahal yang naruh Abi sendiri.",
     "Masakan Umi, yang selalu bikin Abi nambah.",
     "Umi sabar dengerin Abi cerita hal yang sama berkali-kali.",
-    "Umi ingat semua jadwal: imunisasi, ulang tahun keluarga, sampai tanggal bayar listrik.",
-    "Umi bisa nenangin Khalif yang rewel tengah malam. Abi belum tentu bisa.",
+    "Umi ingat semua jadwal: semua angka, semua tanggal umi inget semua kwkw.",
+    "Umi bisa nenangin Khalif yang rewel tengah malam. Yang mana abi belum tentu bisa.",
     "Umi betah dengerin cerita Kakak yang panjangnya kayak sinetron.",
     "Umi tetap cantik, walau pakai daster dan belum sempat mandi.",
     "Umi berani bilang Abi salah, walau Abi kadang belum mau terima.",
-    "Umi nggak pernah membandingkan Abi dengan suami orang lain.",
-    "Umi bilang “terserah”, tapi tetap kasih petunjuk biar Abi nggak salah pilih.",
-    "Umi tidur paling akhir dan bangun paling awal.",
-    "Umi mendukung Abi kuliah S2, termasuk waktu Abi begadang di depan laptop.",
+    "Umi nggak pernah membandingkan Abi dengan orang lain.",
+    "Umi selalu ngomel-ngomel, tapi abi yang tetep sabar hehe.",
+    "Umi tidur paling lelah dan bangun paling awal.",
+    "Umi yang selalu mendukung Abi dalam keadaan apapun.",
     "Umi ngajarin anak-anak doa sebelum tidur.",
-    "Umi selalu nanya, “Abi udah makan?”",
+    "Umi selalu nyuruh, “Abi jemurilah!”",
     "Umi bisa bikin uang belanja cukup sampai akhir bulan.",
-    "Umi tetap tenang waktu anak-anak sakit.",
-    "Umi mau nemenin Abi dari waktu kita belum punya apa-apa.",
-    "Umi masih mau ketawa sama lelucon Abi yang garing.",
+    "Umi tetap hebat waktu anak-anak sakit.",
+    "Umi mau nemenin Abi dari waktu kita belum punya apa-apa sampe kita sekarang yang masih belum punya apa-apa juga kwkwk.",
+    "Umi masih mau ketawa sama candaan bapak-bapak Abi yang cringe ehhe.",
     "Umi bisa gendong Khalif sambil gandeng Kakak, dan masih sempat senyum ke kamera.",
     "Umi ingat hal-hal kecil yang Abi suka.",
-    "Umi tetap sabar walau rumah sudah kayak kapal pecah.",
-    "Umi mengandung dan melahirkan dua anak kita. Itu bukan hal kecil.",
-    "Umi nggak lama-lama kalau lagi marah.",
-    "Umi tahu kalau Abi lagi capek, tanpa Abi bilang.",
-    "Obrolan kita sebelum tidur, walau sering ada yang ketiduran duluan.",
-    "Umi selalu ngingetin Abi salat tepat waktu.",
+    "Umi tetap sabar walau rumah udah kayak kapal pecah belah 10.",
+    "Umi yang mengandung dan melahirkan dua anak kita.",
+    "Umi yang selalu masakin makan yang selaaaluu enakk.",
+    "Umi yang selalu cape waktu malem-malem dan ngeluh sakit. Tak selalu pijetin.",
+    "Umi yang selalu rajin cari cuan.",
+    "Umi selalu ngertiin dan maafin abi.",
     "Umi sayang sama keluarga Abi seperti keluarga sendiri.",
-    "Umi nggak pernah malu jalan sama Abi, walau gaya Abi gitu-gitu aja.",
-    "Enam tahun lebih bareng Umi, dan Abi belum bosan juga.",
+    "Umi nggak pernah malu jalan sama Abi, walau Abi lah cak labi-labi.",
+    "Enam tahun lebih bareng Umi, dan Abi akan tetap bersama Umi.",
     "Umi, apa adanya. Itu sudah cukup buat Abi."
   ],
-  reasonsDone: "Sebenarnya masih ada lagi. Sisanya nanti Abi bilang langsung.",
+  reasonsDone: "Sebenarnya masih ada lagi. Tapi simpen dulu untuk 10 tahun lagi kwkwk.",
 
   kids: [
     {
       from: "Kakak Muwsa",
       age: "5 tahun",
       photo: "assets/photos/muwsa.jpg",
-      message: "Umi, selamat ulang tahun! Muwsa sayaaang Umi sampai ke bulan terus balik lagi. Makasih Umi sudah masakin, mandiin, bacain cerita. Nanti kalau Muwsa sudah besar, Muwsa yang jagain Umi. Jangan capek-capek ya, Umi."
+      message: "Umi, selamat ulang tahun! Muwsa sayaaang Umi sampai ke bulan terus balik lagi. Makasih Umi sudah masakin kakak, mandiin dan suapin kakak. Nanti kalau Muwsa sudah besar, Muwsa yang jagain Umi. Jangan capek-capek ya, Umi."
     },
     {
       from: "Adek Khalif",
       age: "hampir 2 tahun",
       photo: "assets/photos/aaron.jpg",
-      message: "Koko ci umi! dak! cip! mi mi mi mi mi."
+      message: "Koko ta umi! dak! cip! mi mi mi mi mi."
     }
   ],
 
