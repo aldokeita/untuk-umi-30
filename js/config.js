@@ -122,6 +122,7 @@ window.BIRTHDAY = {
 
   // Tambah atau kurangi sesukamu. Foto yang belum ada otomatis disembunyikan.
   gallery: [
+    { photo: "assets/photos/galeri-30.jpg", caption: "Kita, di awal cerita" },
     { photo: "assets/photos/galeri-01.jpg", caption: "Kita, dan lampu-lampu malam" },
     { photo: "assets/photos/galeri-02.jpg", caption: "Empat pose, satu senyum yang sama" },
     { photo: "assets/photos/galeri-03.jpg", caption: "Kencan kecil kita" },
