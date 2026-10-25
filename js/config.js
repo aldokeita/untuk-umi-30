@@ -50,13 +50,13 @@ window.BIRTHDAY = {
   letter: {
     greeting: "Umi,",
     paragraphs: [
-      "Hari ini umurmu tiga puluh. Abi menulis ini pelan-pelan, karena ada terlalu banyak yang ingin Abi katakan, dan Abi takut ada yang tertinggal.",
-      "Kita memulai semuanya pada 18 April 2020, di tahun ketika dunia seperti berhenti berputar. Orang-orang menutup pintu rumahnya, dan kita justru membuka pintu untuk satu sama lain. Sejak hari itu, rumah tidak lagi berarti sebuah alamat. Rumah adalah tempat di mana Umi ada.",
-      "Abi menyaksikan Umi menjadi seorang ibu. Malam-malam tanpa tidur waktu Muwsa lahir. Tangan yang tetap lembut walau sudah lelah. Sabar yang Umi bagikan setiap hari untuk Abi dan anak-anak. Lalu Aaron datang, rumah kita makin ramai, dan Umi tetap menemukan cara untuk tersenyum.",
-      "Banyak hal yang Umi kerjakan tanpa ada yang melihat. Abi ingin Umi tahu: Abi melihatnya. Semuanya. Dan semuanya Abi syukuri.",
-      "Abi juga tahu Abi bukan suami yang sempurna. Ada hari ketika Abi terlalu lelah untuk mendengar, terlalu sibuk untuk bertanya, terlalu keras kepala untuk minta maaf duluan. Terima kasih sudah tetap memilih Abi, bahkan di hari-hari ketika Abi tidak mudah untuk dipilih.",
-      "Tahun ini Abi tidak datang membawa kotak berpita. Abi datang membawa halaman ini, berisi hal-hal yang sering Abi rasakan tapi jarang Abi ucapkan. Juga sebuah janji: di umur Umi yang baru, Abi ingin lebih banyak hadir, lebih banyak mendengar, dan lebih banyak meringankan.",
-      "Selamat ulang tahun, istriku. Tiga puluh tahun Allah menjaga Umi, sampai akhirnya Umi tiba di hidup Abi. Semoga sisa umur kita dihabiskan bersama, sampai rambut kita sama-sama memutih, dan anak-anak punya cerita sendiri tentang betapa hebatnya ibu mereka."
+      "Hari ini Umi genap 30 tahun. Abi sudah beberapa kali mulai nulis surat ini, dihapus, lalu ditulis lagi. Ternyata susah juga merangkum enam tahun lebih dalam beberapa paragraf.",
+      "Kita menikah tanggal 18 April 2020, waktu pandemi baru mulai dan semuanya serba terbatas. Tapi Abi ingat, hari itu rasanya tenang sekali. Mulai hari itu Abi tahu, apa pun keadaannya, Abi tidak menjalaninya sendirian lagi.",
+      "Setahun kemudian Muwsa lahir, dan Abi lihat sendiri bagaimana Umi belajar jadi ibu. Begadang hampir tiap malam, capek, tapi tetap sabar ke anak. Waktu Aaron datang, rumah makin ramai dan kerjaan Umi makin banyak, tapi Umi masih bisa tertawa.",
+      "Abi tahu banyak yang Umi kerjakan tanpa ada yang lihat, apalagi bilang terima kasih. Abi lihat kok, Mi. Dan Abi bersyukur sekali punya Umi.",
+      "Abi juga sadar masih banyak kurangnya. Kadang Abi terlalu capek sampai kurang mendengarkan cerita Umi, kadang gengsi untuk minta maaf duluan. Makasih ya, sudah tetap sabar sama Abi.",
+      "Tahun ini Abi belum bisa kasih kado. Yang bisa Abi kasih baru halaman ini, isinya hal-hal yang sebenarnya sering Abi rasakan tapi jarang Abi ucapkan. Ke depan Abi mau lebih sering ada buat Umi, dan lebih banyak bantu di rumah.",
+      "Selamat ulang tahun, istriku. Semoga Allah kasih Umi umur yang berkah dan badan yang sehat. Semoga kita terus sama-sama sampai tua, dan anak-anak tumbuh dengan tahu betapa hebatnya ibu mereka."
     ],
     closing: "Yang selalu mencintaimu,",
     signature: "Abi"
