@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>og</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    display: grid; place-items: center; text-align: center;
+    color: #f3eee6;
+    background:
+      radial-gradient(ellipse at 50% 130%, rgba(140,47,69,.55), transparent 60%),
+      radial-gradient(ellipse at 50% -30%, #2c2a5a, transparent 70%),
+      linear-gradient(180deg, #0b1029, #1a1f45);
+    font-family: "Cormorant Garamond", serif;
+    position: relative;
+  }
+  .stars { position: absolute; inset: 0; }
+  .stars i { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: #f6efe2; }
+  .moon { position: absolute; top: 70px; right: 150px; width: 80px; height: 80px; border-radius: 50%; box-shadow: inset -16px -5px 0 0 #f6e7c1; transform: rotate(-20deg); filter: drop-shadow(0 0 20px rgba(246,231,193,.5)); }
+  .k { font-family: "Pinyon Script", cursive; font-size: 120px; line-height: 1; color: #e3cf9f; margin: 0; }
+  .t { font-size: 46px; font-style: italic; margin: 18px 0 0; color: rgba(243,238,230,.85); }
+  .heart { width: 28px; margin: 26px auto 0; fill: #c97b8a; }
+</style>
+</head>
+<body>
+  <div class="stars" id="s"></div>
+  <div class="moon"></div>
+  <div>
+    <p class="k">Untuk Umi</p>
+    <p class="t">Ada sesuatu yang Abi siapkan untukmu.</p>
+    <svg class="heart" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3.2 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.6 0 5.9 3.7 4.4 7.2C19.5 16.4 12 21 12 21z"/></svg>
+  </div>
+  <script>
+    const s = document.getElementById("s");
+    let seed = 7;
+    const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 160; i++) {
+      const d = document.createElement("i");
+      d.style.left = rnd() * 1200 + "px";
+      d.style.top = rnd() * 630 + "px";
+      d.style.opacity = (.25 + rnd() * .75).toFixed(2);
+      const z = (rnd() * 1.6 + .6).toFixed(1);
+      d.style.width = d.style.height = z + "px";
+      s.append(d);
+    }
+  </script>
+</body>
+</html>

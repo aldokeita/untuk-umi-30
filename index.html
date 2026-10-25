@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0d1230">
+  <title>Untuk Umi ♡</title>
+  <meta name="description" content="Ada sesuatu yang Abi siapkan untukmu.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Untuk Umi ♡">
+  <meta property="og:description" content="Ada sesuatu yang Abi siapkan untukmu.">
+  <meta property="og:url" content="https://aldokeita.github.io/untuk-umi-30/">
+  <meta property="og:image" content="https://aldokeita.github.io/untuk-umi-30/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%238c2f45' d='M32 56S6 40 6 22a13 13 0 0 1 26-4 13 13 0 0 1 26 4c0 18-26 34-26 34z'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&family=Patrick+Hand&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-locked">
+
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <!-- ============ GERBANG: hitung mundur + amplop ============ -->
+  <div id="gate" class="gate" role="dialog" aria-modal="true" aria-label="Kejutan untuk Umi">
+    <canvas id="stars" aria-hidden="true"></canvas>
+    <div class="moon" aria-hidden="true"></div>
+
+    <div class="gate-stage" id="gateCountdown">
+      <p class="gate-kicker">Untuk Umi</p>
+      <h1 class="gate-title" id="gateTitle"></h1>
+      <p class="gate-sub" id="gateSub"></p>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="cd-unit" id="cdDaysWrap"><span class="cd-num" id="cdDays">0</span><span class="cd-lbl">hari</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cdHours">00</span><span class="cd-lbl">jam</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cdMins">00</span><span class="cd-lbl">menit</span></div>
+        <div class="cd-unit"><span class="cd-num" id="cdSecs">00</span><span class="cd-lbl">detik</span></div>
+      </div>
+
+      <button class="btn btn-gold" id="gateBtn" type="button" hidden></button>
+    </div>
+
+    <div class="gate-stage" id="gateEnvelope" hidden>
+      <button class="envelope" id="envelope" type="button" aria-label="Buka amplop">
+        <span class="env-back"></span>
+        <span class="env-letter"><span class="env-letter-text">Untuk Umi</span></span>
+        <span class="env-front"></span>
+        <span class="env-flap"></span>
+        <span class="env-seal"><span>J</span></span>
+      </button>
+      <p class="env-hint" id="envHint"></p>
+    </div>
+  </div>
+
+  <main id="main" class="main" aria-hidden="true">
+
+    <!-- ============ PEMBUKAAN ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-num" aria-hidden="true">30</div>
+      <div class="hero-inner">
+        <p class="eyebrow" id="heroEyebrow"></p>
+        <h1 class="hero-title">
+          <span class="hero-title-main" id="heroTitle"></span>
+          <span class="hero-title-sub" id="heroSubtitle"></span>
+        </h1>
+        <p class="hero-name" id="heroName"></p>
+        <div class="ornament" aria-hidden="true"><span></span><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3.2 4.5 6.8 4.5c2.1 0 3.6 1.2 5.2 3 1.6-1.8 3.1-3 5.2-3 3.6 0 5.9 3.7 4.4 7.2C19.5 16.4 12 21 12 21z"/></svg><span></span></div>
+        <p class="hero-line" id="heroLine"></p>
+      </div>
+      <a class="scroll-cue" href="#letter" aria-label="Gulir ke bawah"><span></span></a>
+    </section>
+
+    <!-- ============ SURAT ============ -->
+    <section class="section letter-section" id="letter">
+      <div class="paper reveal">
+        <p class="letter-greeting" id="letterGreeting"></p>
+        <div class="letter-body" id="letterBody"></div>
+        <p class="letter-closing" id="letterClosing"></p>
+        <p class="letter-sign" id="letterSign"></p>
+      </div>
+    </section>
+
+    <!-- ============ SEJAK 18 APRIL 2020 ============ -->
+    <section class="section together" id="together">
+      <header class="section-head reveal">
+        <p class="eyebrow">Sejak 18 April 2020</p>
+        <h2>Waktu yang sudah kita lalui bersama</h2>
+      </header>
+      <div class="counter reveal" id="counter">
+        <div class="ct-unit"><span class="ct-num" id="ctDays">0</span><span class="ct-lbl">hari</span></div>
+        <div class="ct-unit"><span class="ct-num" id="ctHours">0</span><span class="ct-lbl">jam</span></div>
+        <div class="ct-unit"><span class="ct-num" id="ctMins">0</span><span class="ct-lbl">menit</span></div>
+        <div class="ct-unit"><span class="ct-num" id="ctSecs">0</span><span class="ct-lbl">detik</span></div>
+      </div>
+      <p class="together-foot reveal" id="togetherFoot"></p>
+      <figure class="verse reveal">
+        <p class="arabic" id="verseArabic" lang="ar" dir="rtl"></p>
+        <blockquote id="verseText"></blockquote>
+        <figcaption id="verseRef"></figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ TIMELINE ============ -->
+    <section class="section journey" id="journey">
+      <header class="section-head reveal">
+        <p class="eyebrow">Perjalanan kita</p>
+        <h2>Dari dua, menjadi empat</h2>
+      </header>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- ============ GALERI ============ -->
+    <section class="section gallery-section" id="gallery">
+      <header class="section-head reveal">
+        <p class="eyebrow">Kenangan</p>
+        <h2>Kepingan bahagia kita</h2>
+      </header>
+      <div class="gallery" id="galleryGrid"></div>
+    </section>
+
+    <!-- ============ 30 HAL ============ -->
+    <section class="section reasons-section" id="reasons">
+      <header class="section-head reveal">
+        <p class="eyebrow">Satu untuk setiap tahun</p>
+        <h2>30 hal yang Abi syukuri tentang Umi</h2>
+        <p class="section-note">Sentuh setiap angka untuk membukanya.</p>
+      </header>
+      <div class="reason-stage reveal">
+        <div class="reason-card" id="reasonCard" aria-live="polite">
+          <span class="reason-no" id="reasonNo">♡</span>
+          <p class="reason-text" id="reasonText">Pilih satu angka di bawah.</p>
+        </div>
+        <div class="reason-grid" id="reasonGrid"></div>
+        <p class="reason-progress"><span id="reasonCount">0</span> dari 30 terbuka</p>
+      </div>
+    </section>
+
+    <!-- ============ PESAN ANAK ============ -->
+    <section class="section kids-section" id="kids">
+      <header class="section-head reveal">
+        <p class="eyebrow">Titipan pesan</p>
+        <h2>Dari dua jagoan Umi</h2>
+      </header>
+      <div class="kids" id="kidsGrid"></div>
+    </section>
+
+    <!-- ============ KUPON ============ -->
+    <section class="section coupons-section" id="coupons">
+      <header class="section-head reveal">
+        <p class="eyebrow">Kado dari Abi</p>
+        <h2>Kupon cinta untuk Umi</h2>
+        <p class="section-note">Berlaku seumur hidup. Tukarkan kapan saja Umi mau.</p>
+      </header>
+      <div class="coupons" id="couponGrid"></div>
+    </section>
+
+    <!-- ============ KUE ============ -->
+    <section class="section cake-section" id="cake">
+      <header class="section-head reveal">
+        <p class="eyebrow">Sekarang giliran Umi</p>
+        <h2>Buat permohonan</h2>
+        <p class="section-note" id="cakeHint"></p>
+      </header>
+      <div class="cake-wrap reveal">
+        <button class="cake" id="cakeBtn" type="button" aria-label="Tiup lilin">
+          <span class="candles">
+            <span class="candle"><span class="flame"></span><span class="smoke"></span><span class="digit">3</span></span>
+            <span class="candle"><span class="flame"></span><span class="smoke"></span><span class="digit">0</span></span>
+          </span>
+          <svg class="cake-svg" viewBox="0 0 320 210" aria-hidden="true">
+            <defs>
+              <linearGradient id="tierTop" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fbeff0"/><stop offset="1" stop-color="#f1d6da"/></linearGradient>
+              <linearGradient id="tierBot" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f6e2e5"/><stop offset="1" stop-color="#e7bfc6"/></linearGradient>
+            </defs>
+            <ellipse cx="160" cy="196" rx="150" ry="12" fill="#e3cf9f" opacity=".55"/>
+            <rect x="40" y="100" width="240" height="92" rx="14" fill="url(#tierBot)"/>
+            <path d="M40 118c20 14 40 14 60 0s40-14 60 0 40 14 60 0 40-14 60 0v-6c0-7-6-12-13-12H53c-7 0-13 5-13 12z" fill="#8c2f45"/>
+            <g fill="#b8924a"><circle cx="70" cy="152" r="3"/><circle cx="110" cy="160" r="3"/><circle cx="160" cy="152" r="3"/><circle cx="210" cy="160" r="3"/><circle cx="250" cy="152" r="3"/></g>
+            <rect x="80" y="36" width="160" height="68" rx="12" fill="url(#tierTop)"/>
+            <path d="M80 52c13 10 27 10 40 0s27-10 40 0 27 10 40 0 27-10 40 0v-4c0-7-5-12-12-12H92c-7 0-12 5-12 12z" fill="#c97b8a"/>
+            <g fill="#8c2f45" opacity=".8"><path d="M118 80c-3-4-9-2-8 2 1 3 8 7 8 7s7-4 8-7c1-4-5-6-8-2z"/><path d="M160 84c-3-4-9-2-8 2 1 3 8 7 8 7s7-4 8-7c1-4-5-6-8-2z"/><path d="M202 80c-3-4-9-2-8 2 1 3 8 7 8 7s7-4 8-7c1-4-5-6-8-2z"/></g>
+          </svg>
+        </button>
+        <div class="cake-actions">
+          <button class="btn btn-rose" id="micBtn" type="button"></button>
+          <p class="cake-tap" id="cakeTap"></p>
+        </div>
+        <p class="cake-done" id="cakeDone" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ============ DOA & PENUTUP ============ -->
+    <section class="section prayer-section" id="prayer">
+      <div class="prayer reveal">
+        <p class="arabic arabic-xl" id="prayerArabic" lang="ar" dir="rtl"></p>
+        <p class="prayer-latin" id="prayerLatin"></p>
+        <p class="prayer-meaning" id="prayerMeaning"></p>
+        <div class="ornament" aria-hidden="true"><span></span><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg><span></span></div>
+        <p class="prayer-doa" id="prayerDoa"></p>
+        <p class="aamiin">Aamiin, ya Rabbal ‘alamin.</p>
+        <figure class="verse">
+          <p class="arabic" id="quranArabic" lang="ar" dir="rtl"></p>
+          <blockquote id="quranText"></blockquote>
+          <figcaption id="quranRef"></figcaption>
+        </figure>
+      </div>
+
+      <footer class="closing reveal">
+        <p class="closing-line" id="closing1"></p>
+        <p class="closing-line" id="closing2"></p>
+        <p class="closing-from" id="closingFrom"></p>
+        <div class="closing-actions">
+          <a class="btn btn-rose" id="replyBtn" target="_blank" rel="noopener" hidden></a>
+          <button class="btn btn-ghost" id="replayBtn" type="button"></button>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <button class="music-btn" id="musicBtn" type="button" aria-label="Matikan musik" hidden>
+    <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto" hidden>
+    <button class="lb-close" id="lbClose" type="button" aria-label="Tutup">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" type="button" aria-label="Foto sebelumnya">‹</button>
+    <figure class="lb-figure">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lb-nav lb-next" id="lbNext" type="button" aria-label="Foto berikutnya">›</button>
+  </div>
+
+  <audio id="bgm" preload="none" loop></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
