@@ -27,8 +27,8 @@ window.BIRTHDAY = {
   whatsapp: "",
 
   music: {
-    src: "assets/music/lagu.mp3",
-    title: "Lagu kita"
+    src: "assets/music/lagu.mp3?v=2",
+    title: "Lesung Pipi – Raim Laode"
   },
 
   gate: {
